@@ -35,17 +35,6 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
 		</dependency>
-<!-- 		<dependency> -->
-<!-- 			<groupId>fr.eni.mvnbook</groupId> -->
-<!-- 			<artifactId>banque-persistance</artifactId> -->
-<!-- 			<version>${project.parent.version}</version> -->
-<!-- 			<classifier>tests</classifier> -->
-<!-- 		</dependency> -->
-<!-- 		<dependency> -->
-<!-- 			<groupId>com.h2database</groupId> -->
-<!-- 			<artifactId>h2</artifactId> -->
-<!-- 			<scope>compile</scope> -->
-<!-- 		</dependency> -->
 
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -80,6 +69,8 @@
 	<build>
 		<finalName>banque-web</finalName>
  		<plugins>
+
+			<!-- 
  			<plugin>
  				<groupId>org.apache.maven.plugins</groupId>  				
  				<artifactId>maven-antrun-plugin</artifactId>
@@ -99,6 +90,8 @@
                     </execution>
                 </executions>
  			</plugin>
+			-->
+
 <!-- 			<plugin> -->
 <!-- 				<groupId>org.apache.maven.plugins</groupId> -->
 <!-- 				<artifactId>maven-failsafe-plugin</artifactId> -->
