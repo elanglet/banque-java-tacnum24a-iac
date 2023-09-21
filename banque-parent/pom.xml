@@ -522,7 +522,8 @@
 					<locales>fr</locales>
 				</configuration>
 			</plugin>
-			<!--<plugin>
+			
+			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
 				<executions>
@@ -558,7 +559,8 @@
 						</jacoco-agent.destfile>
 					</systemPropertyVariables>
 				</configuration>
-			</plugin>-->
+			</plugin>
+
 		</plugins>
 		<extensions>
 			<extension>
