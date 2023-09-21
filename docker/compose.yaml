@@ -1,0 +1,23 @@
+
+version: '3.8'
+
+services:
+  tomcat:
+    image: tomcat-banque:1.0
+    container_name: tomcat-banque
+    build: 
+      context: .
+      dockerfile: Dockerfile.tomcat
+    ports:
+      - 8180:8080
+    depends_on:
+      - mariadb
+      
+  mariadb:
+    image: mariadb-banque:1.0
+    container_name: mariadb-banque
+    build: 
+      context: .
+      dockerfile: Dockerfile.mariadb
+    environment:
+      - MARIADB_RANDOM_ROOT_PASSWORD=yes
