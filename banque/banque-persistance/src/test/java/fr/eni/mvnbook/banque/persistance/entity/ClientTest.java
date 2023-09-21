@@ -38,7 +38,7 @@ public class ClientTest {
 	public void setUp() throws Exception {
 		client = new Client();
 		client.setId(12);
-		client.setNom("DUPONT");
+		client.setNom("DUPONT")
 		client.setPrenom("Robert");
 		client.setAdresse("40 rue de la Paix");
 		client.setCodePostal("75007");	
