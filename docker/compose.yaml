@@ -2,6 +2,7 @@
 services:
   rp:
     image: apache-banque:1.0
+    container_name: apache-banque
     build:
       context: .
       dockerfile: Dockerfile.apache
@@ -16,8 +17,6 @@ services:
     build: 
       context: .
       dockerfile: Dockerfile.tomcat
-    ports:
-      - 8180:8080
     depends_on:
       - mariadb
       
