@@ -24,7 +24,7 @@
 		<hibernate.validator.version>5.4.3.Final</hibernate.validator.version>
 		<junit.version>4.13.1</junit.version>
 		<el-impl.version>2.2</el-impl.version>
-		<h2.version>2.1.214</h2.version>
+		<h2.version>2.2.224</h2.version>
 		<mysql.connector.version>8.0.30</mysql.connector.version>
 		<mockito.version>2.25.1</mockito.version>
 		<assertj.version>3.11.1</assertj.version>
@@ -522,7 +522,7 @@
 					<locales>fr</locales>
 				</configuration>
 			</plugin>
-			
+			<!--
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
@@ -560,7 +560,7 @@
 					</systemPropertyVariables>
 				</configuration>
 			</plugin>
-
+			-->
 		</plugins>
 		<extensions>
 			<extension>
