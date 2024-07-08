@@ -1,7 +1,15 @@
 
-version: '3.8'
-
 services:
+  rp:
+    image: apache-banque:1.0
+    build:
+      context: .
+      dockerfile: Dockerfile.apache
+    ports:
+      - 80:80
+    depends_on:
+      - tomcat
+
   tomcat:
     image: tomcat-banque:1.0
     container_name: tomcat-banque
@@ -21,3 +29,10 @@ services:
       dockerfile: Dockerfile.mariadb
     environment:
       - MARIADB_RANDOM_ROOT_PASSWORD=yes
+    volumes:
+      - mariadb:/var/lib/mysql
+
+volumes:
+  mariadb:
+    name: mariadb
+    driver: local
