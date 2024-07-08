@@ -31,13 +31,5 @@ pipeline {
                 }
             }
         }
-        /*
-        stage('Déploiement Docker') {
-            steps {
-                bat ".\\docker\\pre-deploy.cmd"
-                bat "docker compose -f docker\\compose.yaml up -d --build"
-            }
-        }
-        */
     }
 }
