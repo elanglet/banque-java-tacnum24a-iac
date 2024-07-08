@@ -37,7 +37,9 @@ pipeline {
             }
         }
         stage('Deploy In Container') {
-            bat "docker compose -f docker/compose.yaml up -d --build"
+            steps {
+                bat "docker compose -f docker/compose.yaml up -d --build"
+            }
         }
     }
 }
