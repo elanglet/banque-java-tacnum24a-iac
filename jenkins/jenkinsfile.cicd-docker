@@ -33,11 +33,11 @@ pipeline {
         }
         stage('Pre-Deploy') {
             steps {
-                bat "copy /Y .\banque\banque-web\target\banque-web.war .\docker\app"
+                bat "copy /Y ./banque/banque-web/target/banque-web.war ./docker/app"
             }
         }
         stage('Deploy In Container') {
-            bat "docker compose -f docker\\compose.yaml up -d --build"
+            bat "docker compose -f docker/compose.yaml up -d --build"
         }
     }
 }
