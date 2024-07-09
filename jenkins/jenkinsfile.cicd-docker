@@ -27,7 +27,7 @@ pipeline {
                 // On spécifie la version de Maven et de Java à utiliser pour le build
                 withMaven(maven: 'Maven3', jdk: 'JDK11') {
                     // Lancer la commande Maven pour packager l'application
-                    bat "mvn -f banque/pom.xml package"
+                    bat "mvn -f code/banque/pom.xml package"
                 }
             }
             post {
@@ -40,12 +40,12 @@ pipeline {
         }
         stage('Pre-Deploy') {
             steps {
-                bat "copy /Y .\\banque\\banque-web\\target\\banque-web.war .\\docker"
+                bat "copy /Y .\\code\\banque\\banque-web\\target\\banque-web.war .\\iac\\docker\\app"
             }
         }
         stage('Deploy In Container') {
             steps {
-                bat "docker compose -f docker\\compose.yaml up -d --build"
+                bat "docker compose -f iac\\docker\\compose.yaml up -d --build"
             }
         }
     }
