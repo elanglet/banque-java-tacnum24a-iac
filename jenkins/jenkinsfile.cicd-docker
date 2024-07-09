@@ -15,6 +15,7 @@ pipeline {
                 cleanWs()
                 // Récupérer le code depuis le SCM
                 git url: "https://github.com/elanglet/banque-java-tacnum24a", branch: "main"
+                git url: "https://github.com/elanglet/banque-java-tacnum24a-iac", branch: "main"
             }
         }
         stage('Build') {
@@ -35,7 +36,7 @@ pipeline {
         }
         stage('Pre-Deploy') {
             steps {
-                bat "copy /Y .\\banque\\banque-web\\target\\banque-web.war .\\docker\\app"
+                bat "copy /Y .\\banque\\banque-web\\target\\banque-web.war .\\docker"
             }
         }
         stage('Deploy In Container') {
