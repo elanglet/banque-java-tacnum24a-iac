@@ -14,8 +14,12 @@ pipeline {
                 // Netooyage des anciens builds
                 cleanWs()
                 // Récupérer le code depuis le SCM
-                git url: "https://github.com/elanglet/banque-java-tacnum24a", branch: "main"
-                git url: "https://github.com/elanglet/banque-java-tacnum24a-iac", branch: "main"
+                dir('code') {
+                    git url: "https://github.com/elanglet/banque-java-tacnum24a", branch: "main"
+                }
+                dir('iac') {
+                    git url: "https://github.com/elanglet/banque-java-tacnum24a-iac", branch: "main"
+                }
             }
         }
         stage('Build') {
